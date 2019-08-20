@@ -47,12 +47,16 @@
         <h1 id="fighter2-health">Health: 100</h1>
       </div>
     </div>
-    <div class="row text-center justify-content-between">
-      <div class="col"><button class="btn btn-secondary" onclick="giveSensu()">Sensu Bean</button>
+    <div id="sensu" class="row text-center justify-content-between">
+      <div class="col"><button class="btn btn-secondary"
+          onclick="slapgame2.controllers.itemController.giveSensu()">Sensu Bean</button>
       </div>
-      <div class="col text-center"><button class="btn btn-secondary" onclick="giveDragonBalls()">Dragon Balls</button>
+      <div id="dragon-balls" class="col text-center"><button class="btn btn-secondary"
+          onclick="slapgame2.controllers.itemController.giveDragonBalls()">Dragon Balls</button>
       </div>
-      <div class="col text-center"><button class="btn btn-secondary" onclick="fusion()">Fusion Dance</button></div>
+      <div id="fusion-dance" class="col text-center"><button class="btn btn-secondary"
+          onclick="slapgame2.controllers.itemController.fusion()">Fusion
+          Dance</button></div>
     </div>
     <script src="slapgame2.js" type="module"></script>
 </body>

@@ -1,23 +1,17 @@
-import fighterController from "./controllers/fighterController.js"
+import FighterController from "./controllers/fighterController.js"
+import ItemController from "./controllers/itemController.js"
 
 class Slapgame2 {
   constructor() {
     console.log("Slapgame2 Created")
     this.controllers = {
-      fighterController: new fighterController()
+      fighterController: new FighterController(),
+      itemController: new ItemController
     }
   }
 }
 
 window["slapgame2"] = new Slapgame2()
-
-
-let items = {
-  sensu: { name: "Sensu Bean", modifier: 100, description: "I feel way better!" },
-  dragonBalls: { name: "Dragon Balls", modifier: 100, description: "Good to be back!" },
-  fusion: { name: "Fusion Dance", modifier: 200, description: "I'm more powerful than ever!" },
-  instantTransmission: { name: "Instant Transmission", modifier: 200, description: "Can't hit me if you can't see me!" }
-}
 
 //items to restore health
 function giveSensu() {
