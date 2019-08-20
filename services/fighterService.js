@@ -21,31 +21,37 @@ export default class FighterService {
     _fighters[fighter2].hits++
   }
   powerUp(fighter) {
-    if (fighter[fighter].health > 0) {
-      fighter[fighter].health *= fighter[fighter].health;
+    if (_fighters[fighter].health > 0) {
+      _fighters[fighter].health *= _fighters[fighter].health;
     }
-    if (fighter[fighter].health == 1) {
-      fighter[fighter].health *= fighter[fighter].health;
+    if (_fighters[fighter].health == 1) {
+      _fighters[fighter].health *= _fighters[fighter].health;
     }
-    if (fighter[fighter].hits > 0) {
-      fighter[fighter].hits = 0;
-    }
-
-    //FIXME (doesn't get called, health goes negative)
-    negatives(fighter2) {
-      if (_fighters[fighter2].health < 1) {
-        _fighters[fighter2].health = 0;
-      }
-    }
-
-    get Fighter() {
-      return _fighters.fighter
-    }
-    get Fighter2() {
-      return _fighters.fighter2
-    }
-
-    constructor() {
-      console.log("Fighters created!")
+    if (_fighters[fighter].hits > 0) {
+      _fighters[fighter].hits = 0;
     }
   }
+  reset(fighter, fighter2) {
+    _fighters[fighter].health = 100;
+    _fighters[fighter2].health = 100;
+    _fighters[fighter].hits = 0;
+    _fighters[fighter2].hits = 0;
+  }
+  //FIXME (the following three functions don't get called)
+  negatives(fighter2) {
+    if (_fighters[fighter2].health < 1) {
+      _fighters[fighter2].health = 0;
+    }
+  }
+
+  get Fighter() {
+    return _fighters.fighter
+  }
+  get Fighter2() {
+    return _fighters.fighter2
+  }
+
+  constructor() {
+    console.log("Fighters created!")
+  }
+}

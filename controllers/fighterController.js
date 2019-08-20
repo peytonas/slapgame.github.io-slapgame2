@@ -40,15 +40,28 @@ export default class FighterController {
     _draw()
   }
 
-  powerup(fighter) {
+  powerUp(fighter) {
     _fighterService.powerUp(fighter)
     _draw()
   }
 
-  // FIXME (doesn't get called, health goes negative)
+  // FIXME (the following three functions don't get called)
   negatives(fighter2) {
     _fighterService.negatives(fighter2)
     _draw()
+  }
+
+  knockOut(fighter2) {
+    if (_fighterService[fighter2].health == 0) {
+      alert("KO!!!");
+    }
+  }
+
+  reset(fighter, fighter2) {
+    _fighterService[fighter].health = 100;
+    _fighterService[fighter2].health = 100;
+    _fighterService[fighter].hits = 0;
+    _fighterService[fighter2].hits = 0;
   }
 
   constructor() {

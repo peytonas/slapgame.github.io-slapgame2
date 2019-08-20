@@ -11,41 +11,12 @@ class Slapgame2 {
 
 window["slapgame2"] = new Slapgame2()
 
-let fighter = {
-  goku: {
-    health: 100,
-    hits: 0,
-    attacks: {
-      punch: 5,
-      kick: 10,
-      kamehameha: 85
-    },
-    items: []
-  },
-  frieza: {
-    health: 100,
-    hits: 0,
-    attacks: {
-      punch: 5,
-      kiBlast: 5,
-      tailWhip: 15,
-      deathComet: 90
-    },
-    items: []
-  }
-}
 
 let items = {
   sensu: { name: "Sensu Bean", modifier: 100, description: "I feel way better!" },
   dragonBalls: { name: "Dragon Balls", modifier: 100, description: "Good to be back!" },
   fusion: { name: "Fusion Dance", modifier: 200, description: "I'm more powerful than ever!" },
   instantTransmission: { name: "Instant Transmission", modifier: 200, description: "Can't hit me if you can't see me!" }
-}
-
-
-function
-  negatives()
-update()
 }
 
 //items to restore health
@@ -81,28 +52,5 @@ function fusion() {
     alert(items.fusion.description)
   }
   negatives()
-  update()
-}
-
-// update health after taking damage
-function update() {
-
-}
-
-function knockOut() {
-  if (fighter.goku.health == 0) {
-    alert("KO!!!");
-  }
-  if (fighter.frieza.health == 0) {
-    alert("KO!!!");
-  }
-}
-
-// reset game
-function reset() {
-  fighter.goku.health = 100;
-  fighter.frieza.health = 100;
-  fighter.goku.hits = 0;
-  fighter.frieza.hits = 0;
   update()
 }

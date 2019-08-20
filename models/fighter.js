@@ -6,3 +6,25 @@ export default class Fighter {
     this.health = 100
   }
 }
+
+// goku: {
+//   health: 100,
+//     hits: 0,
+//       attacks: {
+//     punch: 5,
+//       kick: 10,
+//         kamehameha: 85
+//   },
+//   items: []
+// },
+// frieza: {
+//   health: 100,
+//     hits: 0,
+//       attacks: {
+//     punch: 5,
+//       kiBlast: 5,
+//         tailWhip: 15,
+//           deathComet: 90
+//   },
+//   items: []
+// }
