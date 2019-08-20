@@ -52,16 +52,12 @@ export default class FighterController {
   }
 
   knockOut(fighter2) {
-    if (_fighterService[fighter2].health == 0) {
-      alert("KO!!!");
-    }
+    _fighterService.knockOut(fighter2)
   }
 
-  reset(fighter, fighter2) {
-    _fighterService[fighter].health = 100;
-    _fighterService[fighter2].health = 100;
-    _fighterService[fighter].hits = 0;
-    _fighterService[fighter2].hits = 0;
+  reset() {
+    _fighterService.reset()
+    _draw()
   }
 
   constructor() {

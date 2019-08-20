@@ -31,11 +31,16 @@ export default class FighterService {
       _fighters[fighter].hits = 0;
     }
   }
-  reset(fighter, fighter2) {
-    _fighters[fighter].health = 100;
-    _fighters[fighter2].health = 100;
-    _fighters[fighter].hits = 0;
-    _fighters[fighter2].hits = 0;
+  knockOut(fighter2) {
+    if (_fighters[fighter2].health <= 0) {
+      alert("KO!!!");
+    }
+  }
+  reset() {
+    _fighters.fighter.health = 100;
+    _fighters.fighter2.health = 100;
+    _fighters.fighter.hits = 0;
+    _fighters.fighter2.hits = 0;
   }
   //FIXME (the following three functions don't get called)
   negatives(fighter2) {
