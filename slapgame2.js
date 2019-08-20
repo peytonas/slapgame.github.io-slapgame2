@@ -1,3 +1,16 @@
+import fighterController from "./controllers/fighterController.js"
+
+class Slapgame2 {
+  constructor() {
+    console.log("Slapgame2 Created")
+    this.controllers = {
+      fighterController: new fighterController()
+    }
+  }
+}
+
+window["slapgame2"] = new Slapgame2()
+
 let fighter = {
   goku: {
     health: 100,
@@ -29,56 +42,10 @@ let items = {
   instantTransmission: { name: "Instant Transmission", modifier: 200, description: "Can't hit me if you can't see me!" }
 }
 
-//decrease total health
-function punch(targetName) {
-  if (fighter[targetName].health > 0 && fighter[targetName].health < 9000) {
-    fighter[targetName].health -= 5
-  } else if (fighter[targetName].health > 9000) {
-    fighter[targetName].health -= 500
-  }
-  fighter[targetName].hits++
-  negatives()
-  update()
-  knockOut()
-}
 
-function kick(targetName) {
-  if (fighter[targetName].health > 0 && fighter[targetName].health < 9000) {
-    fighter[targetName].health -= 10
-  } else if (fighter[targetName].health > 9000) {
-    fighter[targetName].health -= 1000
-  }
-  fighter[targetName].hits++
+function
   negatives()
-  update()
-  knockOut()
-}
-
-function kamehameha(targetName) {
-  if (fighter.goku.health > 0 && fighter.goku.health < 9000) {
-    fighter[targetName].health -= fighter.goku.attacks.kamehameha;
-  } else if (fighter.goku.health > 9000) {
-    fighter[targetName].health -= fighter.goku.attacks.kamehameha * 10;
-  }
-  fighter[targetName].hits++
-  negatives()
-  update()
-  knockOut()
-
-}
-
-function powerUp(targetName) {
-  if (fighter[targetName].health > 0) {
-    fighter[targetName].health *= fighter[targetName].health;
-  }
-  if (fighter[targetName].health == 1) {
-    fighter[targetName].health *= fighter[targetName].health;
-  }
-  if (fighter[targetName].hits > 0) {
-    fighter[targetName].hits = 0;
-  }
-  negatives()
-  update()
+update()
 }
 
 //items to restore health
@@ -119,24 +86,7 @@ function fusion() {
 
 // update health after taking damage
 function update() {
-  let gokuHealthElement = document.getElementById("gokuHealth");
-  let friezaHealthElement = document.getElementById("friezaHealth");
-  let gokuHitsElement = document.getElementById("gokuHits")
-  let friezaHitsElement = document.getElementById("friezaHits")
 
-  gokuHealthElement.textContent = "Health: " + fighter.goku.health.toString()
-  friezaHealthElement.textContent = "Health: " + fighter.frieza.health.toString()
-  gokuHitsElement.textContent = "Hits: " + fighter.goku.hits.toString()
-  friezaHitsElement.textContent = "Hits: " + fighter.frieza.hits.toString()
-}
-
-function negatives() {
-  if (fighter.goku.health < 1) {
-    fighter.goku.health = 0;
-  }
-  if (fighter.frieza.health < 1) {
-    fighter.frieza.health = 0;
-  }
 }
 
 function knockOut() {
