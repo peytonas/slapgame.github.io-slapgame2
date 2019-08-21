@@ -4,8 +4,12 @@ let _fighterService = new FighterService()
 
 function _draw() {
   let fighter = _fighterService.Fighter
-  let fighter2 = _fighterService.Fighter2
-
+  let template = `
+  <div class="card">
+    <h2>${fighter.name}</h2>
+    <h4>Health: ${target.health}</h4>
+  </div>
+  `
   let fighterNameElement = document.querySelector("#fighter-name")
   let fighterHitsElement = document.querySelector("#fighter-hits")
   let fighterHealthElement = document.querySelector("#fighter-health");
@@ -25,6 +29,20 @@ function _draw() {
 }
 
 export default class FighterController {
+  constructor() {
+    console.log("Ready to fight?")
+    _draw()
+  }
+
+  addItem(itemIndex) {
+    _fighterService.addItem(itemIndex)
+  }
+
+  attackFighter(attackName) {
+    _fighterService.attackFighter(attackName)
+    _draw()
+  }
+
   punch(fighter2) {
     _fighterService.punch(fighter2)
     _draw()
@@ -60,10 +78,7 @@ export default class FighterController {
     _draw()
   }
 
-  constructor() {
-    console.log("Ready to fight?")
-    _draw()
-  }
+
 
   //TODO first create buttons on the DOM
   // then add onclick's that trigger the methods that live on the controller

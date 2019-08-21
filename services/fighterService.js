@@ -61,6 +61,9 @@ export default class FighterService {
       _fighter[fighter].hits = 0;
     }
   }
+
+
+
   knockOut(fighter2) {
     if (_fighter[fighter2].health <= 0) {
       alert("KO!!!");
@@ -81,16 +84,16 @@ export default class FighterService {
 }
 
 
-// function giveSensu() {
-//   if (fighter.goku.health < fighter.frieza.health) {
-//     fighter.goku.health += items.sensu.modifier;
-//     fighter.goku.items.push(items.sensu)
-//     alert(items.sensu.description)
-//   } else if (fighter.frieza.health < fighter.goku.health) {
-//     fighter.frieza.health += items.sensu.modifier;
-//     fighter.frieza.items.push(items.sensu)
-//     alert(items.sensu.description)
-//   }
+// giveSensu() {
+// if (_fighter.fighter.health < _fighter.fighter2.health) {
+//   _fighter.fighter.health += sensu.modifier;
+
+//   alert(sensu.description)
+// } else if (fighter.frieza.health < fighter.goku.health) {
+//   fighter.frieza.health += items.sensu.modifier;
+//   fighter.frieza.items.push(items.sensu)
+//   alert(items.sensu.description)
+// }
 //   negatives()
 //   update()
 // }
