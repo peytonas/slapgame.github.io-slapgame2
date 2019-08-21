@@ -5,13 +5,12 @@ export default class Fighter {
     this.health = health
     this.hits = 0
     this.attacks = {
-      "punch": punch,
-      "kick": kick,
-      "kamehameha": kamehameha,
+
     },
       this.items = []
   }
 }
+
 
 // goku: {
 //   health: 100,
