@@ -7,7 +7,7 @@ export default class Fighter {
     this.attacks = {
       "punch": punch,
       "kick": kick,
-      "kamehameha": kamehameha
+      "kamehameha": kamehameha,
     },
       this.items = []
   }
