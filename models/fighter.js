@@ -1,9 +1,15 @@
 export default class Fighter {
-  constructor(name) {
+  constructor(name, health, hits, punch, kick, kamehameha) {
     console.log(`${name} has entered the arena!`)
     this.name = name
+    this.health = health
     this.hits = 0
-    this.health = 100
+    this.attacks = {
+      "punch": punch,
+      "kick": kick,
+      "kamehameha": kamehameha
+    },
+      this.items = []
   }
 }
 

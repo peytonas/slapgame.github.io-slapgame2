@@ -1,13 +1,35 @@
 import Fighter from "../models/fighter.js"
+import Item from "../models/item.js"
 
 let _fighters = {
-  fighter: new Fighter("Goku"),
-  fighter2: new Fighter("Frieza")
+  fighter: new Fighter("Goku", 100, 0, 5, 10, 50)
 }
+let sensu = new Item("Sensu Bean", 100, "I feel way better!")
+let dragonBalls = new Item("Dragon Balls", 100, "Good to be back!")
+let fusionDance = new Item("Fusion Dance", 100, "I'm more powerful than ever!")
+let instantTransmission = new Item("Instant Transmission", 200, "Can't hit me if you can't see me!")
 
+let _items = [sensu, dragonBalls, fusionDance, instantTransmission]
 
 
 export default class FighterService {
+  constructor() {
+    console.log("Fighters created!")
+  }
+  get Fighter() {
+    return {
+      name: _fighters.name,
+      health: _fighters.health,
+      attacks: _fighters.health,
+      items: _fighters.items,
+      hits: _fighters.hits,
+    }
+  }
+
+  addItem(itemIndex) {
+    let targetItem = _items{ }
+  }
+
   punch(fighter2) {
     _fighters[fighter2].health -= 5
     _fighters[fighter2].hits++
@@ -17,7 +39,7 @@ export default class FighterService {
     _fighters[fighter2].hits++
   }
   kamehameha(fighter2) {
-    _fighters[fighter2].health -= 75
+    _fighters[fighter2].health -= 50
     _fighters[fighter2].hits++
   }
   powerUp(fighter) {
@@ -47,16 +69,5 @@ export default class FighterService {
     if (_fighters[fighter2].health < 1) {
       _fighters[fighter2].health = 0;
     }
-  }
-
-  get Fighter() {
-    return _fighters.fighter
-  }
-  get Fighter2() {
-    return _fighters.fighter2
-  }
-
-  constructor() {
-    console.log("Fighters created!")
   }
 }
