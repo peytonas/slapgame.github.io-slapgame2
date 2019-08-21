@@ -22,11 +22,11 @@
         <p id="fighter-hits">Hits: 0</p>
 
         <button class="btn btn-danger py-2"
-          onclick="slapgame2.controllers.fighterController.punch('fighter2')">Punch</button>
+          onclick="slapgame2.controllers.fighterController.attackFighter('punch')">Punch</button>
         <button class="btn btn-warning py-2"
-          onclick="slapgame2.controllers.fighterController.kick('fighter2')">Kick</button>
+          onclick="slapgame2.controllers.fighterController.attackFighter('kick')">Kick</button>
         <button class="btn btn-primary py-2"
-          onclick="slapgame2.controllers.fighterController.kamehameha('fighter2')">Kamehameha</button>
+          onclick="slapgame2.controllers.fighterController.attackFighter('kamehameha')">Kamehameha</button>
         <button class="btn btn-success py-2" onclick="slapgame2.controllers.fighterController.powerUp('fighter')">Power
           Up</button>
 
@@ -50,17 +50,15 @@
     <div class="row text-center justify-content-between">
       <div class="col text-center">
         <button id="sensu" class="btn btn-secondary"
-          onclick="slapgame2.controllers.itemController.giveSensu('fighter')">Sensu
-          Bean</button>
+          onclick="slapgame2.controllers.fighterController.addItem('sensu')">Sensu Bean</button>
       </div>
       <div class="col text-center">
         <button id="dragon-balls" class="btn btn-secondary"
-          onclick="slapgame2.controllers.itemController.giveDragonBalls('fighter')">Dragon Balls</button>
+          onclick="slapgame2.controllers.fighterController.addItem('dragon-balls')">Dragon Balls</button>
       </div>
       <div class="col text-center">
         <button id="fusion-dance" class="btn btn-secondary"
-          onclick="slapgame2.controllers.itemController.fusion('fighter')">Fusion
-          Dance</button></div>
+          onclick="slapgame2.controllers.fighterController.addItem('fusion-dance')">Fusion Dance</button></div>
     </div>
     <script src="slapgame2.js" type="module"></script>
 </body>

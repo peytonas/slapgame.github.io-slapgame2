@@ -21,7 +21,7 @@ export default class FighterService {
     return {
       name: _fighter.name,
       health: _fighter.health,
-      attacks: _fighter.health,
+      attacks: _fighter.attacks,
       items: _fighter.items,
       hits: _fighter.hits,
     }
@@ -63,7 +63,7 @@ export default class FighterService {
   }
 
 
-
+  //FIXME (the following three functions don't get called)
   knockOut(fighter2) {
     if (_fighter[fighter2].health <= 0) {
       alert("KO!!!");
@@ -75,7 +75,7 @@ export default class FighterService {
     _fighter.fighter.hits = 0;
     _fighter.fighter2.hits = 0;
   }
-  //FIXME (the following three functions don't get called)
+
   negatives(fighter2) {
     if (_fighter[fighter2].health < 1) {
       _fighter[fighter2].health = 0;
