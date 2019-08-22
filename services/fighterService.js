@@ -54,15 +54,15 @@ let _itemState = {
 }
 
 export default class FighterService {
-  constructor() {
-    console.log("Fighters created!")
-  }
-
   get Fighters() {
-    return _state.fighter.map(fighter => new Fighter(fighter))
+    return _state.fighters.map(fighter => new Fighter(fighter))
   }
 
-  addItem(_itemState) {
+  attackFighter() {
+
+  }
+
+  addItem() {
     _itemState.item.push()
   }
 

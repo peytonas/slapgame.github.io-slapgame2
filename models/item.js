@@ -1,8 +1,8 @@
 export default class Item {
-  constructor(name, modifier, description) {
+  constructor(data) {
+    this.name = data.name
+    this.modifier = data.modifier
+    this.description = data.description
     console.log(`You found ${name}!`)
-    this.name = name
-    this.modifier = modifier
-    this.description = description
   }
 }

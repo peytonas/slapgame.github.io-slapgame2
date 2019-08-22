@@ -5,23 +5,27 @@ import FighterService from "../services/fighterService.js";
 let _fighterService = new FighterService()
 
 function _draw() {
+  let template = ''
   let fighters = _fighterService.Fighters
+
+  fighters.forEach((fighter, index)) => {
+    template += fighter.Template
+  }
 
   document.querySelector("#fighters").innerHTML
 }
 
 
-export default class FighterController {
+export default class fighterController {
   constructor() {
     console.log("Ready to fight?")
     _draw
   }
-  addItem(itemIndex) {
-    _fighterService.addItem(itemIndex)
+  addItem(event) {
+    event.preventDefault()
+    let form = event.target
   }
 }
-
-
 
 
 
